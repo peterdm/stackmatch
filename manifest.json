@@ -1,0 +1,21 @@
+{
+  "name": "SO careers suggestions",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "Match prolific answerers to job descriptions for StackOverflow careers",
+  "permissions": [
+    "http://localhost:8983/"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+		"*://careers.stackoverflow.com/jobs",
+        "*://careers.stackoverflow.com/jobs/*"
+	  ],
+      "js" : [
+		"jquery.min.js", 
+		"match.js"
+	  ]
+    }
+  ]
+}
